@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.grupoauramexico</groupId>
+	<artifactId>cm</artifactId>
+	<version>1.0.0</version>
+	<packaging>${packaging}</packaging>
+
+	<parent>
+		<groupId>io.micronaut</groupId>
+		<artifactId>micronaut-parent</artifactId>
+		<version>2.4.2</version>
+	</parent>
+
+	<properties>
+		<packaging>jar</packaging>
+		<jdk.version>1.8</jdk.version>
+		<!-- If you are building with JDK 9 or higher, you can uncomment the lines 
+			below to set the release version -->
+		<!-- <release.version>8</release.version> -->
+		<micronaut.version>2.4.2</micronaut.version>
+		<exec.mainClass>com.grupoauramexico.cm.ApplicationCM</exec.mainClass>
+		<micronaut.data.version>2.3.1</micronaut.data.version>
+		<micronaut.runtime>netty</micronaut.runtime>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>Wintermute Release</id>
+			<url>https://nexus.wintermute.network/nexus/repository/libs-release/</url>
+		</repository>
+		<repository>
+			<id>Wintermute Snapshots</id>
+			<url>https://nexus.wintermute.network/nexus/repository/libs-snapshot/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-management</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut.kubernetes</groupId>
+			<artifactId>micronaut-kubernetes-discovery-client</artifactId>
+			<version>2.3.1</version><!--$NO-MVN-MAN-VER$-->
+			<scope>compile</scope>
+		</dependency>
+	
+	
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-inject</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-validation</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-http-server-netty</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut.test</groupId>
+			<artifactId>micronaut-test-junit5</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-http-client</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut</groupId>
+			<artifactId>micronaut-runtime</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut.data</groupId>
+			<artifactId>micronaut-data-hibernate-jpa</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.micronaut.sql</groupId>
+			<artifactId>micronaut-jdbc-hikari</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<scope>compile</scope>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.logging.log4j</groupId> -->
+<!-- 			<artifactId>log4j-core</artifactId> -->
+<!-- 			<version>2.13.2</version> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.logging.log4j</groupId> -->
+<!-- 			<artifactId>log4j-api</artifactId> -->
+<!-- 			<version>2.13.2</version> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.logging.log4j</groupId> -->
+<!-- 			<artifactId>log4j-slf4j-impl</artifactId> -->
+<!-- 			<version>2.13.2</version> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- efile -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.15</version>
+		</dependency>
+
+		<!-- efile -->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.micronaut.build</groupId>
+				<artifactId>micronaut-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<!-- Uncomment to enable incremental compilation -->
+					<!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
+
+					<annotationProcessorPaths
+						combine.children="append">
+						<path>
+							<groupId>io.micronaut.data</groupId>
+							<artifactId>micronaut-data-processor</artifactId>
+							<version>${micronaut.data.version}</version>
+						</path>
+						<path>
+							<groupId>io.micronaut.openapi</groupId>
+							<artifactId>micronaut-openapi</artifactId>
+							<version>${micronaut.openapi.version}</version>
+						</path>
+						<path>
+							<groupId>io.micronaut.spring</groupId>
+							<artifactId>micronaut-spring-annotation</artifactId>
+							<version>${micronaut.spring.version}</version>
+						</path>
+					</annotationProcessorPaths>
+					<compilerArgs>
+						<arg>-Amicronaut.processing.group=com.grupoauramexico</arg>
+						<arg>-Amicronaut.processing.module=cm</arg>
+						<arg>-J-Dmicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>get-the-git-infos</id>
+						<goals>
+							<goal>revision</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+					<prefix>git</prefix>
+					<verbose>false</verbose>
+					<generateGitPropertiesFile>true</generateGitPropertiesFile>
+					<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+					<format>json</format>
+					<gitDescribe>
+						<skip>false</skip>
+						<always>false</always>
+						<dirty>-dirty</dirty>
+					</gitDescribe>
+				</configuration>
+			</plugin>
+			<plugin>
+		        <groupId>com.google.cloud.tools</groupId>
+		        <artifactId>jib-maven-plugin</artifactId>
+		        <version>3.0.0</version>
+		        <configuration>
+		          <to>
+		            <image>gcr.io/cosmonaut-299500/cosmonaut/cms:${tag}</image>
+		          </to>		          
+		          <container>
+		          	<mainClass>com.grupoauramexico.cm.ApplicationCM</mainClass>
+		          </container>
+		        </configuration>
+		      </plugin>
+		</plugins>
+	</build>
+
+</project>

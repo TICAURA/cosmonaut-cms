@@ -1,0 +1,33 @@
+micronaut:
+  application:
+    name: cosmonaut-cms
+  router:
+      static-resources:
+          swagger:
+              paths: classpath:META-INF/swagger
+              mapping: /swagger/**
+              
+endpoints:
+  loggers:
+    enabled: true
+  health:
+    details-visible: ANONYMOUS
+  env:
+    enabled: true
+    sensitive: false
+#datasources:
+#  default:
+#    url: ${JDBC_URL}
+#    username: ${JDBC_USER}
+#    password: ${JDBC_PASSWORD}
+#    driverClassName: ${JDBC_DRIVER}
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+
+
